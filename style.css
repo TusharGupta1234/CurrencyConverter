@@ -1,0 +1,609 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #272927, hsl(227, 8%, 23%));
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    font-family: 'Cursive', serif;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 28px;
+    margin-left: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Navbar Section */
+.navbar {
+    background-color: rgba(3, 2, 2, 0.7);
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.navbar img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.navbar h1 {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+#nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+#nav-menu li a:hover {
+    color: #00aaff;
+}
+
+/* Container Section */
+.container {
+    background-color: #000000;
+    padding: 40px;
+    border-radius: 15px;
+    width: 50%;
+    box-sizing: border-box;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+    border: 1px solid #dfe6e9;
+    text-align: center;
+}
+
+.amount, .dropdown {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.amount input, select {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.amount input:focus, select:focus {
+    border-color: #34568b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* From and To Sections */
+.dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.from, .to {
+    background-color: #f7faff;
+    padding: 15px;
+    border-radius: 12px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    border: 1px solid #dfe6e9;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.from:hover, .to:hover {
+    box-shadow: 0 0 20px rgba(0, 175, 255, 0.8); /* More intense glow on hover */
+}
+
+.from img, .to img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.from p, .to p {
+    font-size: 14px;
+    color: #888;
+    margin: 0 0 5px;
+    font-weight: bold;
+}
+
+.from select, .to select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.from select:focus, .to select:focus {
+    border-color: #34568b;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.fa-arrow-right-arrow-left {
+    font-size: 24px;
+    color: #34568b;
+}
+
+
+button {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 5rem;
+}
+
+button:hover {
+    background-color: #2c3e50;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 85%;
+        padding: 20px;
+    }
+
+    #nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    #nav-menu li {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    #nav-menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav-menu li a {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .amount input, select {
+        width: 100%;
+    }
+}
+
+/* Flutter Animation Keyframes */
+@keyframes flutter {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(-5deg);
+    }
+    40% {
+        transform: rotate(5deg);
+    }
+    60% {
+        transform: rotate(-5deg);
+    }
+    80% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Apply flutter animation to the flags */
+.flag {
+    animation: flutter 1.5s ease-in-out infinite; /* Infinite flutter effect */
+}
+
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Title Styling */
+
+
+/* Amount Section Styling */
+.amount {
+    margin-bottom: 20px;
+    opacity: 0;
+}
+
+.amount p {
+    font-size: 1.2rem;
+    color: #555555;
+}
+
+.amount input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.amount input:hover {
+    border-color: #333;
+    box-shadow: 0 0 10px rgba(0, 175, 255, 0.4);
+}
+
+/* Dropdown Styling */
+.dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    opacity: 0;
+}
+
+.from, .to {
+    width: 45%;
+    padding: 15px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 175, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.from:hover, .to:hover {
+    box-shadow: 0 0 20px rgba(0, 175, 255, 0.8);
+    transform: translateY(-5px);
+}
+
+.from p, .to p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.select-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.select-container img.flag {
+    width: 45px;
+    height: auto;
+    border-radius: 8px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+
+/* Arrow Styling */
+.arrow {
+    color: #888;
+    font-size: 2rem;
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+    transform: rotate(180deg);
+}
+
+/* Exchange Rate Message */
+.msg {
+    font-size: 1.3rem;
+    color: #4CAF50;
+    font-weight: bold;
+    background: rgba(200, 255, 200, 0.3);
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background 0.5s ease;
+    animation: bounce 1s infinite alternate;
+    opacity: 0;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.msg:hover {
+    background: rgba(200, 255, 200, 0.7);
+}
+
+/* Button Styling */
+button {
+    font-family: "Teko";
+    padding: 12px 24px;
+    font-size: 2.2rem;
+    background: linear-gradient(to right, #4CAF50, #66BB6A);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+}
+
+button:hover {
+    background: linear-gradient(to right, #45A049, #5DBB5A);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+    transform: scale(1.05);
+}
+
+/* Animation Styles */
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Contact Page Styling */
+.contact-description {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Social Links Styling */
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.social-link {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+    color: #4CAF50;
+}
+
+/* Contact Page Button Styling */
+.contact-form button {
+    font-family: "Teko";
+    padding: 15px 30px;
+    font-size: 2rem;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Responsive Design for Contact Page */
+@media (max-width: 768px) {
+    /* Container Styling */
+    .container {
+        padding: 15px;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+
+    /* Form and Text Adjustments */
+    h1, .contact-description, .form-group label {
+        font-size: 1.5rem; /* Adjust main heading and labels */
+    }
+
+    .contact-description {
+        font-size: 1.1rem;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 0.9rem; /* Decrease input text size */
+    }
+
+    /* Social Links Styling */
+    .social-links h3 {
+        font-size: 1.2rem;
+    }
+
+    .social-link {
+        font-size: 1.5rem; /* Decrease icon size */
+        margin: 0 5px; /* Adjust spacing */
+    }
+
+    /* Navbar Adjustments */
+    .navbar ul {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        justify-content: center;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    /* Logo Adjustments */
+    .navbar img {
+        width: 40px; /* Smaller logo for smaller screens */
+    }
+
+    .navbar ul li a {
+        font-size: 1.1rem; /* Adjust navbar links */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Form Adjustments for Small Screens */
+    .form-group {
+        width: 100%; /* Full width for form elements */
+        margin-bottom: 15px; /* Adjust spacing */
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 0.8rem; /* Further decrease text size */
+        padding: 8px; /* Smaller padding */
+    }
+
+    .contact-form button {
+        font-size: 1.5rem; /* Decrease button size */
+        padding: 10px 20px;
+    }
+
+    /* Text Adjustments */
+    h1 {
+        font-size: 1.8rem; /* Smaller heading */
+    }
+
+    .contact-description {
+        font-size: 1rem;
+    }
+
+    .social-links h3 {
+        font-size: 1rem;
+    }
+
+    .social-link {
+        font-size: 1.2rem; /* Smaller icons */
+    }
+}
+

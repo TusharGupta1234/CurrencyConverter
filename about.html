@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ExchangeEase - About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #272927, hsl(227, 8%, 23%));
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            width: 100%;
+            padding: 15px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 999;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar img {
+            height: 45px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #ddd;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 100px auto 50px;
+            padding: 30px;
+            text-align: start;
+            background-color: #000000;
+            border: 1px black;
+            border-radius: 15px;
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+        }
+
+        /* Glow effect on hover */
+        .container:hover {
+            box-shadow: 0 0 20px rgba(239, 244, 173, 0.8); /* Adjust color and intensity */
+        }
+
+        /* Card Container */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            width: 300px;
+            border: 1px solid #3498db;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 50px;
+            opacity: 0; /* Hide initially */
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        .card-img-top {
+            height: 200px; /* Decreased image height */
+            object-fit: cover; /* Maintain aspect ratio and cover the height */
+        }
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Heading & Paragraph */
+        h2,
+        p {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        h2.visible,
+        p.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin-top: 80px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p,
+            li {
+                font-size: 1rem;
+            }
+
+            .navbar h1 {
+                font-size: 1rem;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+
+            .card {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .card-img-top {
+                height: 300px;
+            }
+        }
+
+        h2 {
+            color: #f6e5e5;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            text-decoration: underline;
+            font-family: "Dancing Script", cursive;
+        }
+
+       .card p {
+            font-family: "Nunito";
+            font-size: 1.1rem;
+            color: #f26262;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        p{
+            font-family: "Nunito";
+            font-size: 1.1rem;
+            color: #d8eefa;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div style="display: flex; align-items: center;">
+            <img src="img/DALL·E 2024-10-07 18.54.31 - A modern and sleek logo design for a currency converter application. The logo features a stylized globe with arrows circling around it, symbolizing cu.webp">
+            <h1>ExchangeEase</h1>
+        </div>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login/Sign-up</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <section>
+            <h2 id="heading1">About ExchangeEase</h2>
+            <p>ExchangeEase is a user-friendly currency converter application designed to make your currency exchange needs simple and efficient. Whether you're traveling abroad or just need to convert currencies for business purposes, ExchangeEase provides accurate and up-to-date exchange rates.</p>
+        </section>
+        <section>
+            <h2 id="heading2">Key Features:</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/unnamed-1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Multi-Currency Support</h5>
+                        <p class="card-text">Convert between multiple currencies easily.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/th.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">User-Friendly Interface</h5>
+                        <p class="card-text">Simple and intuitive design for seamless navigation.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/unnamed.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Responsive Design</h5>
+                        <p class="card-text">Works perfectly on all devices, including mobile and tablets.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="heading3">Why Choose ExchangeEase?</h2>
+            <p>Our mission is to provide a seamless experience for users looking to exchange currencies easily. With our intuitive interface and real-time data, you can quickly get the information you need to make informed decisions.</p>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Select all elements to animate sequentially
+            const elements = document.querySelectorAll('h2, p, .card');
+            elements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('visible');
+                }, index * 500); // 0.5-second delay between each element
+            });
+        });
+    </script>
+</body>
+
+</html>
